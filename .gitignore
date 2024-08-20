@@ -46,3 +46,5 @@ Pods/
 
 **/Carthage/Build
 .DS_Store
+FBMemoryProfiler.xcodeproj/project.xcworkspace/xcshareddata
+Example/ExampleApp.xcworkspace/xcshareddata

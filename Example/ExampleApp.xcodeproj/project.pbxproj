@@ -13,12 +13,15 @@
 		753B17B01C617AC2007BCC60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 753B17AF1C617AC2007BCC60 /* Assets.xcassets */; };
 		753B17B31C617AC2007BCC60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 753B17B11C617AC2007BCC60 /* LaunchScreen.storyboard */; };
 		753B17BC1C62633A007BCC60 /* FacebookProjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 753B17BB1C62633A007BCC60 /* FacebookProjectViewController.m */; };
-		758C9CE21C63BC3D00E28900 /* FBAllocationTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 758C9CDF1C63BC3D00E28900 /* FBAllocationTracker.framework */; };
-		758C9CE31C63BC3D00E28900 /* FBMemoryProfiler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 758C9CE01C63BC3D00E28900 /* FBMemoryProfiler.framework */; };
-		758C9CE41C63BC3D00E28900 /* FBRetainCycleDetector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 758C9CE11C63BC3D00E28900 /* FBRetainCycleDetector.framework */; };
 		758C9CE81C63BCEA00E28900 /* GithubRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 758C9CE71C63BCEA00E28900 /* GithubRepository.m */; };
 		75D21B181C62999A00641ECD /* CacheCleanerPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D21B171C62999A00641ECD /* CacheCleanerPlugin.m */; };
 		75D21B1B1C629A0400641ECD /* RetainCycleLoggerPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D21B1A1C629A0400641ECD /* RetainCycleLoggerPlugin.m */; };
+		D701101F2C74924E00BB3F83 /* FBAllocationTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D701101E2C74924700BB3F83 /* FBAllocationTracker.framework */; };
+		D70110202C74924E00BB3F83 /* FBAllocationTracker.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D701101E2C74924700BB3F83 /* FBAllocationTracker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D70110222C74926000BB3F83 /* FBMemoryProfiler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D70110212C74926000BB3F83 /* FBMemoryProfiler.framework */; };
+		D70110232C74926000BB3F83 /* FBMemoryProfiler.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D70110212C74926000BB3F83 /* FBMemoryProfiler.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D70110252C74926600BB3F83 /* FBRetainCycleDetector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D70110242C74926600BB3F83 /* FBRetainCycleDetector.framework */; };
+		D70110262C74926600BB3F83 /* FBRetainCycleDetector.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D70110242C74926600BB3F83 /* FBRetainCycleDetector.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +31,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				D70110232C74926000BB3F83 /* FBMemoryProfiler.framework in Embed Frameworks */,
+				D70110202C74924E00BB3F83 /* FBAllocationTracker.framework in Embed Frameworks */,
+				D70110262C74926600BB3F83 /* FBRetainCycleDetector.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -55,6 +61,10 @@
 		75D21B171C62999A00641ECD /* CacheCleanerPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheCleanerPlugin.m; sourceTree = "<group>"; };
 		75D21B191C629A0400641ECD /* RetainCycleLoggerPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RetainCycleLoggerPlugin.h; sourceTree = "<group>"; };
 		75D21B1A1C629A0400641ECD /* RetainCycleLoggerPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RetainCycleLoggerPlugin.m; sourceTree = "<group>"; };
+		D701101D2C7491FD00BB3F83 /* ExampleApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ExampleApp.entitlements; sourceTree = "<group>"; };
+		D701101E2C74924700BB3F83 /* FBAllocationTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBAllocationTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D70110212C74926000BB3F83 /* FBMemoryProfiler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBMemoryProfiler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D70110242C74926600BB3F83 /* FBRetainCycleDetector.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBRetainCycleDetector.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,9 +72,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				758C9CE21C63BC3D00E28900 /* FBAllocationTracker.framework in Frameworks */,
-				758C9CE31C63BC3D00E28900 /* FBMemoryProfiler.framework in Frameworks */,
-				758C9CE41C63BC3D00E28900 /* FBRetainCycleDetector.framework in Frameworks */,
+				D70110222C74926000BB3F83 /* FBMemoryProfiler.framework in Frameworks */,
+				D701101F2C74924E00BB3F83 /* FBAllocationTracker.framework in Frameworks */,
+				D70110252C74926600BB3F83 /* FBRetainCycleDetector.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +101,7 @@
 		753B17A21C617AC2007BCC60 /* ExampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				D701101D2C7491FD00BB3F83 /* ExampleApp.entitlements */,
 				753B17A61C617AC2007BCC60 /* AppDelegate.h */,
 				753B17A71C617AC2007BCC60 /* AppDelegate.m */,
 				758C9CE61C63BCEA00E28900 /* GithubRepository.h */,
@@ -122,6 +133,9 @@
 		758C9CE51C63BC5900E28900 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D70110242C74926600BB3F83 /* FBRetainCycleDetector.framework */,
+				D70110212C74926000BB3F83 /* FBMemoryProfiler.framework */,
+				D701101E2C74924700BB3F83 /* FBAllocationTracker.framework */,
 				758C9CDF1C63BC3D00E28900 /* FBAllocationTracker.framework */,
 				758C9CE01C63BC3D00E28900 /* FBMemoryProfiler.framework */,
 				758C9CE11C63BC3D00E28900 /* FBRetainCycleDetector.framework */,
@@ -161,12 +175,13 @@
 				TargetAttributes = {
 					753B179F1C617AC2007BCC60 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 7AM452PK4F;
 					};
 				};
 			};
 			buildConfigurationList = 753B179B1C617AC2007BCC60 /* Build configuration list for PBXProject "ExampleApp" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -309,14 +324,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ExampleApp/ExampleApp.entitlements;
+				DEVELOPMENT_TEAM = 7AM452PK4F;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = ExampleApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.facebook.ExampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -324,14 +345,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ExampleApp/ExampleApp.entitlements;
+				DEVELOPMENT_TEAM = 7AM452PK4F;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = ExampleApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.facebook.ExampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
