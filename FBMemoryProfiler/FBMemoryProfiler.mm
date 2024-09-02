@@ -68,8 +68,19 @@ retainCycleDetectorConfiguration:(FBObjectGraphConfiguration *)retainCycleDetect
   [[FBAllocationTrackerManager sharedManager] enableGenerations];
   
   _containerViewController = [FBMemoryProfilerContainerViewController new];
-  
-  _memoryProfilerWindow = [[FBMemoryProfilerWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
+    if (@available(iOS 13.0, *)) {
+        UIWindowScene *windowScene = (UIWindowScene *) [UIApplication sharedApplication].keyWindow.windowScene;
+        if (windowScene){
+            _memoryProfilerWindow = [[FBMemoryProfilerWindow alloc]initWithWindowScene:windowScene];
+        }else {
+            _memoryProfilerWindow = [[FBMemoryProfilerWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+        }
+    } else {
+        _memoryProfilerWindow = [[FBMemoryProfilerWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    }
+    
+    _memoryProfilerWindow.windowLevel = UIWindowLevelAlert + 100;
   _memoryProfilerWindow.touchesDelegate = self;
   _memoryProfilerWindow.rootViewController = _containerViewController;
   _memoryProfilerWindow.hidden = NO;

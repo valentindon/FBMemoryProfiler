@@ -8,7 +8,7 @@
 
 #import "FBMemoryProfilerContainerViewController.h"
 
-#import "FBMemoryProfiler.h"
+//#import "FBMemoryProfiler.h"
 #import "FBMemoryProfilerMathUtils.h"
 #import "FBMemoryProfilerMovableViewController.h"
 
@@ -280,3 +280,17 @@ static UIEdgeInsets FBSafeAreaInsets(UIView *view) {
 }
 
 @end
+//if #available(iOS 13.0, *),
+//   let scene = UIApplication.shared.keyWindow?.windowScene {
+//    window = CustomWindow(windowScene: scene)
+//} else {
+//    window = CustomWindow(frame: UIScreen.main.bounds)
+//}
+//window.windowLevel = .alert + 1
+//
+//let navigation = UINavigationController(rootViewController: UIViewController())
+//navigation.setBackgroundColor(color: .clear)
+//navigation.navigationBar.isHidden = true
+//window.rootViewController = navigation
+//window.isHidden = false
+//return window

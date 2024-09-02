@@ -21,12 +21,26 @@
      Window level will determine how on top we want to appear in window hierarchy.
      We do not want to hide alerts, but we want to be pretty much above everything else.
      */
-    self.windowLevel = UIWindowLevelStatusBar + 100;
+    self.windowLevel = UIWindowLevelAlert + 101;
   }
 
   return self;
 }
 
+- (instancetype)initWithWindowScene:(UIWindowScene *)windowScene
+{
+  if (self = [super initWithWindowScene:windowScene]) {
+    self.backgroundColor = [UIColor clearColor];
+
+    /**
+     Window level will determine how on top we want to appear in window hierarchy.
+     We do not want to hide alerts, but we want to be pretty much above everything else.
+     */
+    self.windowLevel = UIWindowLevelAlert + 101;
+  }
+
+  return self;
+}
 - (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event
 {
   if ([_touchesDelegate window:self shouldReceiveTouchAtPoint:point]) {
@@ -45,7 +59,7 @@
 
 - (BOOL)_canBecomeKeyWindow
 {
-  return NO;
+  return YES;
 }
 
 #endif // _INTERNAL_IMP_ENABLED

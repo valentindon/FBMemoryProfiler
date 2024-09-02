@@ -1,0 +1,11 @@
+framework module FBRetainCycleDetector {
+  umbrella header "FBRetainCycleDetector.h"
+  export *
+
+  module * { export * }
+}
+
+module FBRetainCycleDetector.Swift {
+  header "FBRetainCycleDetector-Swift.h"
+  requires objc
+}
